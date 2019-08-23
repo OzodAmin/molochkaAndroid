@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Molochka</string>
+    <string name="err_password">Введите пароль</string>
+    <string name="err_userName">Введите логин</string>
+    <string name="err_field">Заполните поле</string>
+</resources>

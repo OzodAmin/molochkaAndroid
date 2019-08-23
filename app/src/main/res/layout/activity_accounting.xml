@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".AccountingActivity">
+
+    <ProgressBar
+        android:id="@+id/accounting_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/form_accounting_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/accounting_username"
+                style="@style/Base.TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сумма заказа за сегодня:" />
+
+            <TextView
+                android:id="@+id/accounting_orderSum"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_field_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Внутренний">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_attach_money_black_24dp"
+                    android:drawableLeft="@drawable/ic_attach_money_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_field_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Инкассация">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_attach_money_black_24dp"
+                    android:drawableLeft="@drawable/ic_attach_money_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_field_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Терминал">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_attach_money_black_24dp"
+                    android:drawableLeft="@drawable/ic_attach_money_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_send"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Отправить" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
